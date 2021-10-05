@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Coin Layer API Challenge </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="coinlayer.css">
+</head>
+
+
+<body>
+    <div class="flex-container">
+        <div class="header">
+            <h1 class="hone"> coinlayer API 2021 </h1>
+        </div>
+        <section class="flex-container1">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title1"> 2021 All Time Highs </h5>
+                  <p class="card-text1">All time highs (ATHs) for the cryptocurrency market, brought to you by the coinlayer Application Programming Interface (API). </p>
+                  <a href="./historicaldata.html" class="btn btn-secondary"> Jump to April 14th, 2021 </a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title2">All Cryptocurrencies on Coinlayer</h5>
+                  <p class="card-text2"> There are thousands of cryptocurrencies out there, so keeping track of all of them is difficult. Coinlayer has managed to keep track of 385 cryptocurrencies across 25 exchanges. </p>
+                  <a href="./allcryptos.html" class="btn btn-secondary"> Let's Check Them Out! </a>
+                </div>
+            </div>
+        </section>
+
+<form id="form">
+    <input type="date" id="date">
+    <button type="submit" onclick="fetchData()">Submit Date</button>
+</form>
+
+        <h1>Price Data for April 13th, 2021</h1>
+        <p> Below this paragraph you will see the price data for all 385 cryptocurrencies on April 13th, 2021. This was the day when Bitcoin (BTC) wicked into an all time high and began its descent back down to $28,820 for a 55% correction. At this stage in the game, most cryptocurrencies will follow Bitcoin's trend; whether BTC goes up or down, the majority of 'altcoins' will mirror that of Bitcoin. In the future, we will see this behavior gradually change as BTC's market dominance decreases. Regardless, the all time highs listed below will be broken again this year as we are still in a bull market. </p>
+    
+    <div id="historicaldata">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Symbol</th>
+                <th scope="col">USD</th>
+              </tr>
+            </thead>
+            <tbody id= "tablebody">
+    
+    
+                
+    
+    
+            </tbody>
+          </table>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+        <script src="coinlayer.js"></script>
+</body>
+
+</html>
+
+
+<!-- <div>
+    <div id="historicalCryptoData">
+        <div id="historicalCryptoData">
+            <div class="dropdown">
+                <h2></h2>
+                <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Yearly All Time Highs
+                </a>
+
+                <ol class="dropdown-menu" id="ratesDropdown" aria-labelledby="dropdownMenuLink">
+                </ol>
+            </div>
+        </div>
+    </div>
+</div> -->
