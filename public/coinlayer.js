@@ -1,20 +1,25 @@
-let data = document.getElementById("date").ariaValueMax;
-form.addEventListener('click', e => {
-    console.log(e.target)
-})
-const fetchData = async (date) => {
+// let data = document.getElementById("date").ariaValueMax;
+let input = document.getElementById("myInput");
+let button = document.getElementById("submitButton"); 
+
+const fetchData = async () => {
+    let date = input.value
     let response = await fetch(`http://api.coinlayer.com/${date}?access_key=d6995c432a1913d970e5608bf482e1c2`);
+    console.log(`http://api.coinlayer.com/${date}?access_key=d6995c432a1913d970e5608bf482e1c2`);
     let data = await response.json();
     console.log(data);
-    display (data);
+    display(data);
 }
 
-fetchData();
+// fetchData();
+button.addEventListener("click", fetchData);
+
+
+
 
 function display(data) {
-    alert("You submitted a date");
-    let table = document.getElementById("tablebody");
-    console.log(data);
+    let table = document.getElementById("historicaldata");
+    console.log(data.rates);
     let rates = data.rates
     for (item in rates) {
         let tr = document.createElement("tr");
@@ -29,30 +34,6 @@ function display(data) {
 }
 
 
+// ${date}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function display(data) {
-//     console.log(data.rates);
-//     let rates = data.rates
-//     for (item in rates) {
-//         let historyBtn = document.getElementById("ratesDropdown");
-//         let historyBtnLi = document.createElement("li");
-//         historyBtnLi.innerText = `${item}: ${rates[item]}`;
-//         historyBtn.appendChild(historyBtnLi);
-//     }
-// }

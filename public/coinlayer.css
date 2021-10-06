@@ -3,11 +3,13 @@ body {
     height: 1000px;
 }
 
-.flex-container1 {
+.flex-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    align-items: left;
+    margin: 10px;
 }
 
 .hone {
@@ -17,19 +19,34 @@ body {
     text-align: center;
 }
 
-.btn {
-    background-color: navy;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
 .card-title1 {
     font-size: 25px;
     font-family: "Times New Roman", Times, serif;
     font-style: italic;
 }
 
-.card-title2 {
-    font-size: 25px;
-    font-family: "Times New Roman", Times, serif;
-    font-style: italic;
+#form {
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-weight: 400 !important;
+    background-color: navy;
+    color: whitesmoke;
+    padding: 23px 50px;
+    margin: auto;
+    text-align: center;
+    display: inline-block !important;
+    text-decoration: none;
+    position: relative;
+    top: -4px;
+    right: 0px;
+}
+
+#historicaldata {
+    height: auto;
+    background-color: whitesmoke;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 0.5rem;
 }
