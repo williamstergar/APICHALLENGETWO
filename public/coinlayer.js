@@ -1,4 +1,3 @@
-// let data = document.getElementById("date").ariaValueMax;
 let input = document.getElementById("myInput");
 let button = document.getElementById("submitButton"); 
 
@@ -13,9 +12,6 @@ const fetchData = async () => {
 
 // fetchData();
 button.addEventListener("click", fetchData);
-
-
-
 
 function display(data) {
     let table = document.getElementById("historicaldata");
@@ -32,8 +28,3 @@ function display(data) {
         tr.appendChild(td2);
     }
 }
-
-
-// ${date}
-
-
